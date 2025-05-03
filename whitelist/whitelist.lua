@@ -12,7 +12,7 @@ local koolwl: table = {
 }
 
 local suc, res = pcall(function()
-    return HttpService:JSONDecode(game:HttpGet('https://raw.githubusercontent.com/sstvskids/koolCore/refs/heads/main/whitelist/whitelist.json'))
+    return HttpService:JSONDecode(game:HttpGet('https://raw.githubusercontent.com/skidvape/koolCore/refs/heads/main/whitelist/whitelist.json'))
 end)
 koolwl.data = suc and type(res) == 'table' and res or koolwl.data
 
