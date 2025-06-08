@@ -30,8 +30,10 @@ function koolwl:check()
 end
 
 function koolwl:get(plr: string): (number, boolean)
-    if self.data.WhitelistedUsers[plr] then
-        return self.data.WhitelistedUsers[plr].level, self.data.WhitelistedUsers[plr].attackable
+    for i,v in self.data.WhitelistedUsers do
+        if tostring(plr) == i then
+            return v.level, v.attackable
+        end
     end
     return 0, true
 end
